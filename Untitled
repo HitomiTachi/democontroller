@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./democontroller
+      dockerfile: Dockerfile
+    image: <dockerhub-username>/democontroller:compose
+    container_name: democontroller-app
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
